@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.TransactionController">
+    <children>
+        <AnchorPane fx:id="sidePane" layoutX="-3.0" prefHeight="628.0" prefWidth="219.0" style="-fx-background-color: #eee;">
+            <children>
+                <JFXButton fx:id="settingsBtn" layoutX="57.0" layoutY="552.0" onAction="#settingsBtnOnClick" prefHeight="75.0" prefWidth="170.0" text="Setting">
+                    <font>
+                        <Font name="Segoe UI Light" size="18.0" />
+                    </font>
+                </JFXButton>
+                <JFXButton fx:id="cartBtn" layoutX="57.0" onAction="#cartBtnOnClick" prefHeight="75.0" prefWidth="170.0" text="Back To Shopping Cart">
+                    <font>
+                        <Font name="Segoe UI Light" size="15.0" />
+                    </font>
+                </JFXButton>
+            </children>
+            <effect>
+                <DropShadow />
+            </effect>
+        </AnchorPane>
+        <AnchorPane fx:id="iconPane" prefHeight="628.0" prefWidth="52.0" style="-fx-background-color: #ddd;">
+            <effect>
+                <DropShadow />
+            </effect>
+            <children>
+                <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="9.0" layoutY="573.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@setting.png" />
+                    </image>
+                </ImageView>
+                <ImageView fx:id="allItems" fitHeight="34.0" fitWidth="44.0" layoutX="9.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@allItems.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="mainPane" layoutX="224.0" prefHeight="628.0" prefWidth="775.0">
+            <children>
+                <JFXTextField fx:id="amountTF" layoutX="404.0" layoutY="135.0" onKeyReleased="#amountTFOnReleased" prefHeight="77.0" prefWidth="255.0">
+                    <font>
+                        <Font name="Segoe UI Semilight" size="36.0" />
+                    </font>
+                </JFXTextField>
+                <ImageView fx:id="logo" fitHeight="78.0" fitWidth="159.0" layoutX="308.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@logo.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="44.0" fitWidth="71.0" layoutX="706.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@logout.png" />
+                    </image>
+                </ImageView>
+                <JFXButton fx:id="logoutBtn" layoutX="706.0" layoutY="17.0" onAction="#logoutBtnOnClick" prefHeight="44.0" prefWidth="44.0" text="  " textFill="#d61e1e" />
+            <Label layoutX="105.0" layoutY="147.0" prefHeight="53.0" prefWidth="297.0" text="Amount Paying:   $">
+               <font>
+                  <Font name="Segoe UI Semilight" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="130.0" layoutY="259.0" prefHeight="53.0" prefWidth="273.0" text="Total Amount:   $">
+               <font>
+                  <Font name="Segoe UI Semilight" size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="totalLabel" layoutX="402.0" layoutY="259.0" prefHeight="53.0" prefWidth="245.0">
+               <font>
+                  <Font name="Segoe UI Semilight" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="226.0" layoutY="375.0" prefHeight="53.0" prefWidth="177.0" text="Change:   $">
+               <font>
+                  <Font name="Segoe UI Semilight" size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="changeLabel" layoutX="402.0" layoutY="375.0" prefHeight="53.0" prefWidth="245.0">
+               <font>
+                  <Font name="Segoe UI Semilight" size="36.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="paymentBtn" layoutX="251.0" layoutY="517.0" onAction="#paymentOnClick" style="-fx-border-color: #000;" text="Accept Payment">
+               <font>
+                  <Font name="Segoe UI Semilight" size="36.0" />
+               </font>
+            </JFXButton>
+            </children></AnchorPane>
+    </children>
+</AnchorPane>

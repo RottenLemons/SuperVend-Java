@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="scenePane" prefHeight="600.0" prefWidth="987.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.SettingController">
+    <children>
+        <AnchorPane fx:id="mainPane" layoutX="209.0" prefHeight="600.0" prefWidth="781.0">
+            <children>
+            <Rectangle fx:id="r" fill="#eeeeee" height="600.0" layoutX="-6.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="788.0" />
+                <Label layoutX="264.0" layoutY="14.0" prefHeight="108.0" prefWidth="238.0" text="Settings">
+                    <font>
+                        <Font name="Segoe UI Semibold" size="64.0" />
+                    </font>
+                </Label>
+            <Label layoutX="93.0" layoutY="180.0" text="Themes:">
+               <font>
+                  <Font name="Segoe UI Semibold" size="36.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="lightBtn" layoutX="360.0" layoutY="169.0" onAction="#themeBtnOnClick" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #fff; -fx-border-color: #000;" text="  " />
+            <JFXButton fx:id="darkBtn" layoutX="435.0" layoutY="169.0" onAction="#themeBtnOnClick" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #000; -fx-border-color: #000;" text="  " />
+            <Label layoutX="93.0" layoutY="367.0" text="About SuperVend:">
+               <font>
+                  <Font name="Segoe UI Semibold" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="436.0" layoutY="371.0" text="Version 1.0">
+               <font>
+                  <Font name="Segoe UI Semilight" size="30.0" />
+               </font>
+            </Label>
+            <Hyperlink fx:id="aboutHyperlink" layoutX="436.0" layoutY="463.0" onAction="#aboutHyperlinkOnClick" text="For More Information">
+               <font>
+                  <Font name="Segoe UI Semilight" size="24.0" />
+               </font>
+            </Hyperlink>
+            </children></AnchorPane>
+        <AnchorPane fx:id="sidePane" layoutX="50.0" prefHeight="600.0" prefWidth="135.0">
+            <children>
+            <Rectangle fx:id="r2" fill="#eeeeee" height="600.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="160.0" />
+                <JFXButton fx:id="loginBtn" onAction="#loginBtnOnClick" prefHeight="75.0" prefWidth="160.0" text="Login">
+                    <font>
+                        <Font name="Segoe UI Light" size="18.0" />
+                    </font>
+                </JFXButton>
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="iconPane" prefHeight="600.0" prefWidth="50.0" style="-fx-background-color: #ddd;">
+            <effect>
+                <DropShadow />
+            </effect>
+            <children>
+            <Rectangle fx:id="r3" fill="#dddddd" height="600.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" />
+                <ImageView fitHeight="35.0" fitWidth="34.0" layoutX="8.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@login.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

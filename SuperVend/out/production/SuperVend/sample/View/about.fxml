@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="518.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.AboutController">
+   <children>
+      <AnchorPane prefHeight="74.0" prefWidth="600.0" style="-fx-background-color: #19baa9;">
+         <children>
+            <Label fx:id="label" layoutX="216.0" layoutY="10.0" prefHeight="53.0" prefWidth="181.0" text="SuperVend ">
+               <font>
+                  <Font name="Segoe UI Semilight" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="74.0" prefHeight="221.0" prefWidth="600.0" style="-fx-background-color: #fff;">
+         <children>
+            <ImageView fx:id="creatorImage" fitHeight="105.0" fitWidth="109.0" layoutX="247.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true" rotate="360.0">
+               <image>
+                  <Image url="@creator.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="182.0" layoutY="24.0" text="Created by Mahir Shah">
+               <font>
+                  <Font name="Segoe UI Semilight" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="227.0" text="SuperVend Ver. 1.0">
+               <font>
+                  <Font name="Segoe UI Semilight" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <MediaView fx:id="mediaView" fitHeight="200.0" fitWidth="365.0" layoutX="120.0" layoutY="325.0" />
+   </children>
+</AnchorPane>
